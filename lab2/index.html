@@ -1,122 +1,87 @@
 <!DOCTYPE html>
-<html lang="en>"
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Course Feedback - CSF3133</title>
+</head>
+<body>
+    <!-- Header Section -->
     <header>
-    <h1>Programming Workshop</h1>
-    <h1>Empowering the next generation of developer</h1>
+        <h1>CSF3133 Course Feedback</h1>
     </header>
-      <!-- navigation -->
+    <!-- Navigation Section -->
     <nav>
-        <a href="#Schedule">Schedule</a> | <a href="#Register">Register</a> | <a href="#About">About</a>
-        
+        <a href="index.html#result">Results</a> |
+        <a href="#comment">comment</a> |
+        <a href="feedback.html">Feedback Form</a>
     </nav>
-      <!-- About Event -->
-      <section id="About Event">
-          
-              <h2>About the Event</h2>
-              <p>Welcome to our annual programming workshop.<br>
-              join us to get more information</p>
-              <article>
-                  <h3>Speaker: Dr Wan Nural Jawahir</h3>
-                  <p>Dr Muhammad is senior exucutive in software engineering that currently work with the biggest compony in Malaysia.He will sharing tech talks and conference presentation </p>
-              </article>
-              <article>
-                  <h3>Featured Activity: Visual Block Coding </h3>
-                  <p> Drag and drop project using platform like Scratch to build interactive animations, simple games and digital greeting cards</p>
-              </article>
-    </section>
-      <!-- Event Schedule Table -->
-      <section id="Event Schedule Table">
-          <br>
-          <table border ="1">
-              <tr>
-                  <th> Time </th>
-                  <th>Activity</th>
-                  <th>Venue</th>
-                  <th>Person In Charge</th>
-              </tr>
-              <tr>
-                  <td>8.30 AM - 9.00 AM</td>
-                  <td>Registration & Welcome</td>
-                  <td>Front Hall</td>
-                  <td>Dr Muhaimin</td>
-              </tr>
-              <tr>
-                  <td>9.00AM - 9.15 AM</td>
-                  <td>Welcome & Overview</td>
-                  <td rowspan="3">Main Hall</td><!-- rowspan for Main Hall -->
-                  <td>Dr Muhaimin</td>
-              </tr>
-              <tr>
-                  <td>9.15 AM - 10.30 AM</td>
-                  <td> Module 1: Thinking like a programmer</td>
-                  <td>Dr Muhammad</td>
-              </tr>
-              <tr>
-                  <td>10.30 AM - 12.00AM</td>
-                  <td>Module 2 : Control Flow & Loops</td>
-                  <td>Dr Muhammad</td>
-              </tr>
-              <tr>
-                  <td>12.00PM - 2.00PM</td>
-                  <td colspan="3"> Lunch Break</td> <!-- colspan for Lunch break -->
-              </tr>
-              <tr>
-                  <td>2.00PM -3.00PM</td>
-                  <td> Closing and speech talk from president</td>
-                  <td> Main Hall</td>
-                  <td>Club President</td>
-              </tr>
-          </table>
-    </section>
-      <!-- Registration Form -->
-      <section id="Register"
-               
-               <!-- Student Information -->
-               <h2>Registration form</h2>
-    <form action="Register.html" method="post">
-        <label for="name">Enter your name: </label><br>
-        <input type="text" id="Name" name="name"<br><br>
-          <label for="Mactric Number">Enter your Mactric Number: </label><br>
-        <input type="text" id="Mactric Number" name="Mactric Number"<br><br>
-         <label for="Email">Enter your email: </label><br>
-        <input type="text" id="Email" name="Email"<br><br>
+
+    <main>
+
+        <!-- Feedback Summary Section -->
+        <section id="results">
+            <h2>Result</h2>
+            <table border="1">
+                
+                    <tr>
+                        <th>Week</th>
+                        <th>Topic</th>
+                        <!-- FIX 1: Changed <td>Rating</td> to <th>Rating</th> -->
+                        <th>Rating</th>
+                    </tr>
+                        <td>1</td>
+                        <td>Introduction to HTML</td>
+                        <td>4.5</td>
+                    </tr>
+                    <!-- FIX 2: Added missing </tr> tag -->
+                    <tr>
+                        <td>2</td>
+                        <!-- FIX 3: Removed invalid colspan="3" -->
+                        <td>Tables and Forms</td>
+                        <td>4.2</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <!-- FIX 4: Fixed malformed <td>Semantic HTML<td>4.0</td> -->
+                        <td>Semantic HTML</td>
+                        <td>4.0</td>
+                    </tr>
+                    <!-- EXTENDED: Added extra weeks to expand summary -->
+                    <tr>
+                        <td>4</td>
+                        <td> Fundamentals & Layouts</td>
+                        <td>4.6</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Responsive Web Design</td>
+                        <td>4.4</td>
+                    </tr>
+                
+                    <tr>
+                        <th colspan="2">Average Rating</th>
+                        <td>4.34</td>
+                    </tr>
+                
+            </table>
+        </section>
+        <section id="comment">
+            <article>
+                <h2>Student Comment</h2>
+                <br>
+                <h3>Azeem</h3>
+                <p>The table and labsform are very clear and helpful</p><br>
+            </article>
+            <article>
+                <h3>Amin</h3>
+                <p> The mini project help me apply everything we learn</p>
+            </article>
+        </section>
+            
         
-        <!-- Radio button for year of study -->
-         <label for="Year of Study">Year of Study:</label><br>
-        <label for="year 1">year 1</label><br>
-         <input type="radio" id="year 1" name="year 1" value="year 1"<br><br>
-         <label for="year 2">year 2</label><br> 
-         <input type="radio" id="year 2" name="year 2" value="year 2"<br><br>
-        <label for="year 3">year 3</label><br> 
-        <input type="radio" id="year 3" name="year 3" value="year 3"<br><br>
-        <label for="year 4">year 4</label><br> 
-        <input type="radio" id="year 4" name="year 4" value="year 4"<br><br>
-        <br>
-        <!-- Check Box Seassion to join -->
-        <label for="Session">Select your Session:</label><br>
-        <input type ="checkbox" id="Seassion1" name="Seassion1" value="Module 1">
-        <label for="Seassion1">Module 1</label><br>
-         <input type ="checkbox" id="Seassion2" name="Seassion2" value="Module 2">
-        <label for="Seassion2">Module 2</label><br>
-         <input type ="checkbox" id="Seassion3" name="Seassion3" value="Lucky Draw">
-         <label for="Seassion3">Lucky Draw</label><br><br>
         
-        <!-- drop down list for programme -->
-        <label for="programme">Programme / Faculty:</label>
-                    <select id="programme" name="programme">
-                        <option value="ad">Analytical Data</option>
-                        <option value="it">Information Maritime</option>
-                        <option value="se">Software Engineering</option>
-                        <option value="net">Computer Networking</option>
-                    </select><br><br>
-        <!<!-- Submit Button -->
-        <input type="submit" value="submit ">
-        
-         <footer>
-        <p>Copyright &copy 2024 My web page</p>
-    </footer>
-        
-               
-             
-   
+
+       
+
+</body>
 </html>

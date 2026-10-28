@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <nav>
+        <a href="index.html">Results</a> | 
+        <a href="feedback.html">Feedback Form</a>
+    </nav>
+    
+        <!-- Feedback Form Section -->
+        <section id="form">
+            <h2>Give Your Feedback</h2>
+            <form action="submit_feedback.php" method="post">
+                
+                <p>
+                    <!-- FIX 5: Changed for="name" to for="fullname" to match input id -->
+                    <label for="fullname">Name:</label><br>
+                    <input type="text" id="fullname" name="fullname" required>
+                </p>
+
+                <p>
+                    <label for="studentid">Student ID:</label><br>
+                    <input type="text" id="studentid" name="studentid" required>
+                </p>
+
+                <!-- Radio Buttons for Overall Rating -->
+                <!-- FIX 6: Changed radio names from 'good' and 'poor' to shared name='rating' -->
+                <h2>Overall Rating:</h2>
+                    <input type="radio" id="good" name="rating" value="good">
+                    <label for="good">Good</label><br>
+                    
+                    <input type="radio" id="average" name="rating" value="average">
+                    <label for="average">Average</label><br>
+
+                    <input type="radio" id="poor" name="rating" value="poor">
+                    <label for="poor">Poor</label>
+                <br>
+
+                <!-- Checkbox for Attendance & Improvements -->
+                <p>
+                    <!-- FIX 7: Changed for="labs" to for="lab" to match input id -->
+                    <input type="checkbox" id="lab" name="lab" value="yes">
+                    <label for="lab">I attended all labs</label>
+                </p>
+
+                <br>
+
+                <!-- Dropdown Selection -->
+                <p>
+                    <label for="format">Preferred Learning Format:</label><br>
+                    <select id="format" name="format">
+                        <option value="face_to_face">Face to face</option>
+                        <option value="hybrid">Hybrid </option>
+                        <option value="online">Fully Online </option>
+                    </select>
+                </p>
+
+             
+
+                <!-- Submit Button -->
+                <p>
+                    <input type="submit" value="Submit">
+                </p>
+
+            <!-- FIX 8: Fixed typo </from> to </form> -->
+            </form>
+        </section>
+
+
+    <!-- Footer Section -->
+    <footer>
+        <!-- FIX 9: Validated copyright symbol entity -->
+        <p>Copyright &copy; 2026 CSF3133. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
