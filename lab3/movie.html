@@ -1,0 +1,91 @@
+<!DOCTYPE html> <!-- Error 1(Line 1): missing <<!doctype html> -->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Ticket Booking</title>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div id="header">
+        <!-- Error 2 (Line 12): Incorrect closing tag placement for <h1> and <span> (<h1>e-Ticket <span>...</h1></span>) -->
+        <h1>e-Ticket <span>Your Campus Cinema</span></h1>
+    </div>
+
+    <!-- Main Content Section -->
+    <!-- Error 3 (Line 17 & 36): Standard block element <h2>/forms wrapped inside an inline element <span id="content">  -->
+    <div id="content">
+        <h2>Book Your Ticket</h2>
+        <p>Promotion: tickets &lt; RM10 for students &amp; staff!</p>
+        
+        <!-- Error 4 (Line 23): String concatenation in oninput causing "2"+"3"="23" instead of numeric addition  -->
+        <!-- Extension: Updated oninput to also calculate total price (Adult = RM 12, Child = RM 8) -->
+        <form action="booking.php" oninput="
+            total.value = Number(adult.value) + Number(child.value);
+            price.value = 'RM ' + ((Number(adult.value) * 12) + (Number(child.value) * 8));">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required autofocus><br>
+                <label for="email">E-mail:</label><br>
+                <!-- Error 5 (Line 18): Misspelled type attribute type="emial" -->
+                <input type="email" id="email" name="email" required><br>
+                <!--  Added phone number  -->
+                <label for="phone">Phone Number:</label><br>
+                <input type="tel" id="phone" name="phone" placeholder="012-3456789" required><br>
+                <label for="date">Show date:</label><br>
+                <input type="date" id="date" name="date"><br>
+                <!-- Added show time -->
+                <label for="time">Show time:</label><br>
+                <input type="time" id="time" name="time"><br>
+                <label for="movie">Movie:</label><br>
+                <!-- Error 6 (Line 41 & 42): Mismatched list attribute (list="movies") and datalist ID (id="movielist") -->
+                <input id="movie" name="movie" list="movielist"><br>
+                <datalist id="movielist">
+                    <option value="Space Rangers">
+                    <option value="Kampung Comedy">
+                    <option value ="Ultraman Cosmos">
+                </datalist>
+                <label for="adult">Adult tickets:</label><br>
+                <input type="number" id="adult" name="adult" value="0" min="0"><br>
+                <label for="child">Child tickets:</label><br>
+                <input type="number" id="child" name="child" value="0" min="0"><br>
+                <label for="rating">Rate our service:</label><br>
+                <!-- Error 7 (Line 52): Inverted min and max values in range slider (min="5" max="1") -> Fixed to min="1" max="5" -->
+                <input type="range" id="rating" name="rating" min="1" max="5"><br>
+                <!-- Error 8 (Line 54): Mismatched 'for' attribute in <output> (for="adult kid" instead of child) -> Fixed to for="adult child" -->
+                Total tickets: <output name="total" for="adult child">0</output><br>
+                <!-- Added second <output name="price"-->
+                Total price: <output name="price" for="adult child">RM 0</output><br>
+                <input type="submit" value="Book Now"><br>
+        </form>
+    </div>
+
+    <!-- Extension: Added sidebar titled "Now Showing" with 3 movies  -->
+    <div id="sidebar">
+        <h3>Now Showing</h3>
+        <ul>
+            <li>
+                <strong>Space Rangers</strong> <span>(U)</span> &ndash; 
+                <a href="https://youtu.be/GCwxtl6SB0g?si=e0RkrY-kIlpQbxK5" target="_blank">Watch Trailer</a>
+            </li>
+            <li>
+                <strong>Kampung Comedy</strong> <span>(U)</span> &ndash; 
+                <a href="https://youtu.be/y9VDTgQCFTY?si=Lot_3qy56a0sPkCj" target="_blank">Watch Trailer</a>
+            </li>
+            <li>
+                <strong>Ultraman Cosmos</strong> <span>(U)</span> &ndash; 
+                <a href="https://youtu.be/QumSaHCUzrI?si=CflnA-iRSgFDNh3f" target="_blank">Watch Trailer</a>
+            </li>
+        </ul>
+    </div>
+
+    <div id="footer">
+        <!-- Error 9 (Line 82): Malformed HTML entity &Copy; (case-sensitive) -->
+        <p>&copy; 2026 CineKampus. All rights reserved.</p>
+        <!-- Extension: Added footer text using correct entities for ®, <, and & -->
+        <p>e-Ticket&reg; &ndash; Campus Cinema &lt; RM10 every Tuesday &amp; Thursday discounts available!</p>
+    </div>
+
+</body>
+        <!-- Error 10 (Line 41): Stray text/tag error "</html1>54 </body>" -->
+
+</html>
