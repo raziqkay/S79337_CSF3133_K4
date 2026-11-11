@@ -1,0 +1,97 @@
+/* General page style */
+body {
+  font-family: Arial, Helvetica, sans-serif;  
+  font-size: 16px;                         
+  color: #222222;                           
+  background-color: #F4F9FB;                 
+  margin: 0;
+}
+
+/* Centre the main content */
+header, main {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Text decoration on headings */
+h1 { text-decoration: overline; text-align: center; color: #0B5E7E; }
+h2 { text-decoration: underline; color: #0B5E7E; }
+h3 { color: #0B5E7E; margin-bottom: 5px; }
+
+/* Navigation bar */
+nav ul {
+  list-style-type: none;           
+  margin: 0;
+  padding: 0;
+  display: flex;                   
+  flex-wrap: wrap;
+  background-color: #0B5E7E;
+}
+nav li { flex: 1 1 auto; }
+nav a {
+  display: block;
+  padding: 14px 20px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;           
+}
+
+/* Link states: link > visited > hover > active */
+a:link    { color: #1A5276; }
+a:visited { color: #7D3C98; }
+a:hover   { color: #E67E22; }
+a:active  { color: #C0392B; }
+
+/* Navigation links keep white text */
+nav a:link, nav a:visited { color: #FFFFFF; background-color: #0B5E7E; }
+nav a:hover  { color: #FFFFFF; background-color: #E67E22; }
+nav a:active { color: #FFFFFF; background-color: #C0392B; }
+
+/* ID selectors */
+#destinations { padding: 10px 0; }
+#video { padding: 10px 0; }
+#trip  { padding: 10px 0; }
+
+/* Class selectors: destination cards and prices */
+.card {
+  background-color: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  border-radius: 8px;
+  padding: 10px 15px;
+  margin: 12px 0;
+}
+.price { font-size: 18px; }
+.old-price { text-decoration: line-through; color: #888888; }  
+.new-price { font-weight: bold; color: #C0392B;               }
+.center { text-align: center; }
+
+/* Video: scales on small screens */
+video { max-width: 100%; height: auto; }
+figure { margin: 0; }
+.caption { font-style: italic; color: #555555; }
+
+/* Form */
+.trip-form {
+  background-color: #E8F6F3;
+  padding: 15px;
+  border: 2px solid #0B5E7E;
+  width: 90%;
+  max-width: 500px;
+  box-sizing: border-box;
+}
+.trip-form input[type="text"],
+.trip-form input[type="email"] { width: 100%; padding: 6px; box-sizing: border-box; }
+.trip-form fieldset { margin-bottom: 12px; }
+
+/* Footer */
+footer {
+  background-color: #0B5E7E;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 20px;
+}
+footer a:link, footer a:visited { color: #FFFFFF; }
+footer a:hover { color: #F5B041; }
+footer a:active { color: #C0392B; }

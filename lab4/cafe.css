@@ -1,0 +1,45 @@
+/* Navigation bar (moved from the internal style block) */
+nav ul {
+  list-style-type: none;           
+  margin: 0;
+  padding: 0;
+  background-color: #1A5276;
+}
+nav li { display: inline-block; }  
+nav a {
+  display: block;                  
+  padding: 12px 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+/* More specific than a:link / a:visited in the page*/
+nav a:link, nav a:visited { color: #FFFFFF; background-color: #1A5276; }
+nav a:hover  { color: #FFFFFF; background-color: #E67E22; }  
+nav a:active { color: #FFFFFF; background-color: #C0392B; }
+
+/* Menu items and promotion prices */
+.old-price {
+  text-decoration: line-through;   
+  color: #888888;
+}
+
+/* Video (responsive) with caption */
+video { max-width: 100%; height: auto; }
+figure { margin: 0; }
+figcaption { font-style: italic; color: #555555; }
+
+/* Feedback form */
+.feedback-form {
+  background-color: #FEF9E7;
+  padding: 15px;
+  border: 2px solid #1A5276;
+  width: 90%;
+  max-width: 500px;
+  box-sizing: border-box;
+}
+.feedback-form input[type="text"],
+.feedback-form input[type="email"] { width: 100%; padding: 6px; box-sizing: border-box; }
+.feedback-form fieldset { margin-bottom: 12px; }
+
+/* Footer */
+footer { text-align: center; padding: 10px 0; }
