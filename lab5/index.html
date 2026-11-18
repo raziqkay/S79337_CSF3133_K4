@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Campus Bookstore</title>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&amp;family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shop.css">
+<style>
+h1 { text-align: center; }
+</style>
+</head>
+<body>
+<!--
+Error 1 (shop.html, Line 7): rel="stylesheets" is invalid. Changed to rel="stylesheet" so shop.css loads.
+Error 2 (shop.html, Lines 10-12): <style> was placed inside <body>. Moved it into <head>.
+Error 3 (shop.html, Line 18): style="color=#1B4F72;" used = instead of :. Changed to color:#1B4F72 (title now blue).
+Error 4 (shop.html, Line 20): table id="product" did not match #products in CSS. Changed id to "products".
+Error 5 (shop.css, Line 2): font name 'Robotto' misspelt. Changed to 'Roboto'.
+Error 6 (shop.css, Line 4): "no repeat" needs a hyphen. Changed to no-repeat.
+Error 7 (shop.css, Line 5): property "bacground-position" misspelt. Changed to background-position.
+Error 8 (shop.css, Line 18): display:inline ignores vertical padding. Changed to display:block.
+Error 9 (shop.css, Line 23): selector li:a:hover is invalid. Changed to li a:hover.
+Error 10 (shop.css, Line 27): border-collapse: collapsed is invalid. Changed to collapse (single borders).
+Error 11 (shop.css, Line 34): tr:nth-child(2) only coloured one row. Changed to tr:nth-child(even).
+Error 12 (shop.css, Line 37): :hovered is not a pseudo-class. Changed to :hover.
+Error 13 (shop.css, Line 45): missing semicolon after #f1f1f1. Added ;
+-->
+<header>
+  <h1>Campus Bookstore</h1>
+  <p>Textbooks, stationery and more for every student.</p>
+</header>
+<nav>
+  <ul>
+    <li><a class="active" href="#home">Home</a></li>
+    <li><a href="#books">Books</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+<main id="books">
+  <table id="products">
+    <tr><th>Item</th><th>Category</th><th>Price (RM)</th></tr>
+    <tr><td>Web Design Basics</td><td>Textbook</td><td class="price">45.00</td></tr>
+    <tr><td>A4 Notebook</td><td>Stationery</td><td class="price">6.50</td></tr>
+    <tr><td>USB Drive 32GB</td><td>Gadget</td><td class="price">25.00</td></tr>
+    <tr><td>Highlighter Set</td><td>Stationery</td><td class="price">9.90</td></tr>
+  </table>
+</main>
+<footer id="contact">&copy; 2026 Campus Bookstore</footer>
+</body>
+</html>
